@@ -10,7 +10,7 @@ python = "^3.9.2"
 typer = "^0.4.0"
 speedtest-cli = "^2.1.3"
 ambient = {git = "https://github.com/AmbientDataInc/ambient-python-lib.git"}
-pandas = "1.3.4"
+pandas = "2.2.3"
 numpy = "1.21.1"
 PyYAML = "^5.3.1"
 
