@@ -27,7 +27,7 @@ jobs:
         run: docker run -v /tmp:/tmp faruryo/sptest-tester pytest -s --cov=sptest --cov-report=xml:/tmp/coverage.xml
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: /tmp/coverage.xml
