@@ -1,5 +1,5 @@
 # Extract the pip module from poetry.toml
-FROM python:3.9.7 as builder
+FROM python:3.13.2 as builder
 
 RUN pip install --no-cache-dir poetry==1
 
@@ -11,7 +11,7 @@ RUN poetry export --without-hashes -f requirements.txt -o requirements.txt
 RUN poetry export --dev --without-hashes -f requirements.txt -o requirements-dev.txt
 
 # -----------------------------------------------------------------------------
-FROM python:3.9.7 as runbase
+FROM python:3.13.2 as runbase
 
 ENV PYTHONUNBUFFERED=1
 
